@@ -1,0 +1,64 @@
+.contact {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    &__title {
+        font-family: $ff-en;
+        font-size: 60px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        padding: 60px 0;
+        margin-left: 50%;
+        color: white;
+
+        &::after {
+            border: 2px solid #ffffff;
+            content: "";
+            width: 200px;
+            margin-left: 30px;
+        }
+
+        @include mq-down(sm) {
+            font-size: 30px;
+            margin: 0 auto;
+            padding-left: 90px;
+
+            &::after {
+                border: 1px solid #ffffff;
+                content: "";
+                width: 100px;
+                margin-left: 30px;
+            }
+        }
+    }
+
+    &__inner {
+        text-align: center;
+        padding: 80px 0;
+    }
+
+    &__info {
+        padding: 40px 0;
+    }
+
+    &__text {
+        font-family: $ff-ja;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+    }
+
+    &__opacity {
+
+        &--text {
+            font-size: 90px;
+            color: rgba(248, 238, 238, 0.233);
+            padding: 70px 0;
+
+            @include mq-down(sm) {
+                font-size: 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+$layout-max-width: 1000px;
+$wrapper-max-width: 900px;
+
+.container {
+    max-width: $layout-max-width;
+    margin: 0 auto;
+
+    @include mq-down() {
+        width: 90%;
+    }
+
+    @include mq-down(lg) {
+        width: 90%;
+    }
+
+    @include mq-down(sm) {
+        width: 100%;
+    }
+}
+
+.wrapper {
+    max-width: $wrapper-max-width;
+    margin: 0 auto;
+
+    @include mq-down() {
+        width: 90%;
+    }
+
+    @include mq-down(lg) {
+        width: 90%;
+    }
+
+    @include mq-down(sm) {
+        width: 90%;
+    }
+}

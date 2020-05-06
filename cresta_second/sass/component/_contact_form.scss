@@ -1,0 +1,128 @@
+.contact-form {
+    font-family: $ff-ja;
+
+    &__title {
+        font-size: 14px;
+        font-weight: bold;
+        padding-bottom: 9px;
+    }
+
+    &__inner {
+        padding: 100px 140px 90px 140px;
+
+        @include mq-down(sm) {
+            padding: 90px 0;
+        }
+    }
+
+    &__check {
+        display: flex;
+        width: 100%;
+        padding-bottom: 30px;
+
+        @include mq-down(sm) {
+            display: block;
+            padding: 10px 0;
+        }
+    }
+
+    &__checkboxlabel {
+        font-size: 16px;
+        margin-left: 16px;
+    }
+
+    &__checkbox {
+        position: relative;
+        top: 6px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        margin-right: 14px;
+        width: 15px;
+        height: 20px;
+        cursor: pointer;
+        transition: all 0.15s ease-out 0s;
+        color: #fff;
+        border: none;
+        outline: none;
+        appearance: none;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            border: 1px solid #999;
+            border-radius: 50%;
+        }
+
+        &:checked::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 11px;
+            height: 11px;
+            background: #000;
+            border-radius: 50%;
+        }
+    }
+
+    &__input {
+        height: 30px;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #000;
+        border-radius: 0;
+        font-family: inherit;
+        font-size: 1.6rem;
+        padding: 8px;
+        resize: none;
+        width: 100%;
+        outline: none;
+    }
+
+    &__name {
+        padding-top: 3px;
+        padding-bottom: 30px;
+    }
+
+    &__tel {
+        padding-top: 3px;
+        padding-bottom: 30px;
+    }
+
+    &__email {
+        padding-top: 3px;
+        padding-bottom: 30px;
+    }
+
+    &__textarea {
+        height: 165px;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #000;
+        border-radius: 0;
+        font-family: inherit;
+        font-size: 1.6rem;
+        padding: 8px;
+        resize: none;
+        width: 100%;
+        outline: none;
+    }
+
+    &__text {
+        padding-top: 3px;
+        padding-bottom: 30px;
+    }
+
+    &__btn {
+        text-align: center;
+        padding-bottom: 120px;
+    }
+}

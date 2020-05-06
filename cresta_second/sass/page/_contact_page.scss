@@ -1,0 +1,52 @@
+.contact-page {
+    position: relative;
+
+    img {
+        width: 100%;
+
+        @include mq-down(sm) {
+            height: 360px;
+        }
+    }
+
+    &__inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+
+        @include mq-down(sm) {
+            top: 42%;
+            left: 36%;
+        }
+
+    }
+
+    &__title {
+        font-family: $ff-en;
+        font-size: 60px;
+        font-weight: bold;
+        color: white;
+        transform: translate(-50%,-50%);
+
+        @include mq-down(sm) {
+            font-size: 30px;
+            transform: none;
+        }
+    }
+
+    &__opacity {
+        position: absolute;
+        top: 66%;
+        left: 3%;
+
+        &--text {
+            font-size: 90px;
+            color: rgba(248, 238, 238, 0.233);
+
+            @include mq-down(sm) {
+                font-size: 40px;
+            }
+        }
+    }
+}

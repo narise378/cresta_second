@@ -1,0 +1,198 @@
+.header {
+    position: fixed;
+    width: 100%;
+    font-family: $ff-en;
+    z-index: 100;
+
+    &__js-bg {
+        background: #282F35;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        padding: 20px 0;
+        letter-spacing: 3px;
+        transition: all .6s ease;
+
+        @include mq-down(sm) {
+            padding: 60px 20px;
+        }
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &__anchor {
+            color: white;
+        }
+
+        &__title {
+            font-size: 26px;
+        }
+    }
+
+    &__nav {
+        padding: 20px 0;
+
+        @include mq-down(sm) {
+            display: none;
+        }
+
+        .global-nav {
+
+            &__menu {
+                display: flex;
+                align-items: center;
+            }
+
+            &__link {
+                color: white;
+                font-size: 16px;
+                letter-spacing: 3px;
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+// ---  スマホナビ --- //
+#nav-toggle {
+    position: fixed;
+    top: 57px;
+    right: 25px;
+    height: 32px;
+    cursor: pointer;
+
+    @include mq-up(sm) {
+        display: none;
+    }
+
+    div {
+        position: relative;
+        width: 36px;
+    }
+
+    span {
+        width: 100%;
+        height: 3px;
+        left: 0;
+        display: block;
+        background: white;
+        position: absolute;
+        transition: transform .6s ease-in-out, top .5s ease;
+
+        &:nth-child(1) {
+        top: 0;
+        }
+        &:nth-child(2) {
+        top: 14px;
+        }
+        &:nth-child(3) {
+        top: 28px;
+        }
+    }
+
+    &:hover span:nth-child(1) {
+        top: 4px;
+    }
+
+    &:hover span:nth-child(3) {
+        top: 23px;
+    }
+
+}
+
+.open {
+    #nav-toggle span {
+        background: #fff;
+
+        &:nth-child(1) {
+            top: 15px;
+            transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+            top: 15px;
+            width: 0;
+            left: 50%;
+        }
+
+        &:nth-child(3) {
+            top: 15px;
+            transform: rotate(-45deg);
+        }
+  }
+}
+
+#nav-toggle {
+    z-index: 1000;
+}
+
+#smart-nav {
+    background: #282F35;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 990;
+    text-align: center;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9rem;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+}
+
+#smart-nav {
+    a {
+        display: block;
+        color: whitesmoke;
+        text-decoration: none;
+        padding: 10px 0;
+        transition: color .6s ease;
+
+        &:hover {
+        color: #666;
+        }
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            font-family: $ff-en;
+            padding-bottom: 40px;
+
+            img {
+                width: 69px;
+                height: 69px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+// open //
+.open {
+    overflow: hidden;
+
+  #smart-nav {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #smart-nav li {
+    opacity: 1;
+    transform: translateX(0);
+    transition:  transform 1s ease, opacity .9s ease;
+  }
+}

@@ -1,0 +1,14 @@
+.footer {
+    height: 79px;
+
+    &__inner {
+        width: 100%;
+        margin: 0 auto;
+    }
+    &__copy {
+        font-family: $ff-en;
+        font-size: 14px;
+        padding: 30px 0;
+        text-align: center;
+    }
+}

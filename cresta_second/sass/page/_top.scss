@@ -1,0 +1,42 @@
+.topview {
+    position: relative;
+
+    &__inner {
+        position: absolute;
+        top: 0;
+        left: 10.6%;
+        padding: 400px 0 175px 0;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+
+        @include mq-down(sm) {
+            left: 0;
+            width: 100%;
+            margin: 0 auto;
+            padding: 300px 0 175px 0;
+        }
+    }
+
+    &__title {
+        font-family: $ff-en;
+        font-size: 70px;
+        letter-spacing: 2px;
+        padding: 0 0 30px 0 ;
+
+        @include mq-down(sm) {
+            font-size: 37px;
+        }
+    }
+
+    &__subtitle {
+        font-family: $ff-ja;
+        font-size: 40px;
+        letter-spacing: 2px;
+
+        @include mq-down(sm) {
+            font-size: 30px;
+            padding: 40px;
+        }
+    }
+}

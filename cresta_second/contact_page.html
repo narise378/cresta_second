@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cresta Contact-Page</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap">
+
+    <link rel="stylesheet" href="/sass/style.css">
+    <link rel="stylesheet" href="/css/swiper.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header id="js-header" class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <a class="logo__anchor" href="/">
+                        <h1 class="logo__title">Cresta Design</h1>
+                    </a>
+                </div>
+                <!-- global-nav -->
+                <div class="header__nav">
+                    <nav class="global-nav">
+                        <ul class="global-nav__menu">
+                            <li class="global-nav__item"><a class="global-nav__link" href="/">TOP</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div><!-- header__inner -->
+        </div><!-- container -->
+    </header><!-- HEADER -->
+
+    <!-- smart-nav -->
+    <div id="nav-toggle">
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div id="smart-nav">
+        <nav>
+            <ul>
+                <li class="nav-item"><a class="nav-link" href="#">TOP</a></li>
+            </ul>
+        </nav>
+    </div><!-- smart-nav -->
+
+    <!-- CONTACT-PAGE -->
+    <section id="js-height" class="contact-page">
+        <img src="/img/contact-page-bgi@2x.jpg" alt="CONTACT PAGE">
+        <div class="contact-page__inner">
+            <h2 class="contact-page__title">Contact</h2>
+        </div>
+        <div class="contact-page__opacity">
+            <h2 class="contact-page__opacity--text">Contact us</h2>
+        </div>
+    </section><!-- CONTACT-PAGE -->
+
+    <!-- CONTACT-FORM -->
+    <section class="contact-form">
+        <div class="wrapper">
+            <div class="contact-form__inner">
+                <form action="#" method="#">
+                    <p class="contact-form__title">お問い合わせ内容</p>
+                    <div class="contact-form__check">
+                        <label for="1" class="contact-form__checkboxlabel"><input type="checkbox" value="1" id="1" name="checkbox[]" class="contact-form__checkbox">資料請求</label>
+                        <label for="2" class="contact-form__checkboxlabel"><input type="checkbox" value="2" id="2" name="checkbox[]" class="contact-form__checkbox">お電話でのご相談を希望</label>
+                        <label for="3" class="contact-form__checkboxlabel"><input type="checkbox" value="3" id="3" name="checkbox[]" class="contact-form__checkbox">申し込み</label>
+                    </div>
+
+                    <label class="contact-form__title" for="name" name="name">担当者名</label>
+                    <div class="contact-form__name">
+                        <input class="contact-form__input" type="text" name="name" id="name">
+                    </div>
+
+                    <label class="contact-form__title" for="tel" name="tel">電話番号</label>
+                    <div class="contact-form__tel">
+                        <input class="contact-form__input" type="tel" name="tel" id="tel">
+                    </div>
+
+                    <label class="contact-form__title" for="email" name="email">メールアドレス</label>
+                    <div class="contact-form__email">
+                        <input class="contact-form__input" type="email" name="email" id="email">
+                    </div>
+
+                    <label class="contact-form__title" for="textarea">その他</label>
+                    <div class="contact-form__text">
+                        <textarea class="contact-form__textarea" name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                    </div>
+                </form>
+            </div><!-- contact-form__inner -->
+            <div class="contact-form__btn">
+                <button class="btn" type="submit">Submit</button>
+            </div>
+        </div><!-- wrapper -->
+    </section><!-- contact-form -->
+</body>
+
+<footer class="footer">
+    <div class="footer__inner">
+        <p class="footer__copy">©︎cresta.design all rights reserved</p>
+    </div><!-- footer__inner -->
+</footer><!-- footer -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/swiper.min.js"></script>
+<script src="/js/swiper_setting.js"></script>
+<script src="/js/script.js"></script>
+</html>
